@@ -5,7 +5,7 @@ import './index.css';
   function Square(props) {
     return (
       <button 
-          className="square" 
+          className={ "square " + (props.value === 'X' ? ' square-red ' : '') + (props.value === 'O' ? ' square-green ' : '')}
           onClick={props.onClick}
         >
           {props.value}
@@ -40,6 +40,7 @@ import './index.css';
       return <Square 
         value={this.state.squares[i]}
         onClick={() => this.handleClick(i)}
+        className={this.state.squares[i]==='X' ? 'square-red' : 'square-green'}
       />;
     }
   

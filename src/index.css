@@ -1,6 +1,15 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
   margin: 20px;
 }
 
@@ -33,6 +42,41 @@ ol, ul {
   text-align: center;
   width: 34px;
   color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.square-green {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #87ed6b,
+    0 0 80px #87ed6b,
+    0 0 90px #87ed6b,
+    0 0 100px #87ed6b,
+    0 0 150px #87ed6b;
+}
+
+.square-red {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #e80000,
+    0 0 80px #e80000,
+    0 0 90px #e80000,
+    0 0 100px #e80000,
+    0 0 150px #e80000;
 }
 
 .square:focus {

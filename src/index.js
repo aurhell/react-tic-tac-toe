@@ -5,12 +5,22 @@ import './index.css';
   function Square(props) {
     return (
       <button 
-          className={ "square " + (props.value === 'X' ? ' square-red ' : '') + (props.value === 'O' ? ' square-green ' : '')}
+          className={ "square " + getColor(props.value)}
           onClick={props.onClick}
         >
           {props.value}
       </button>
     )
+  }
+
+  function getColor(value) {
+    if (value === 'X') {
+      return 'square-red';
+    }
+    if (value === '0') {
+      return 'square-green';
+    } 
+    return;
   }
   
   class Board extends React.Component {

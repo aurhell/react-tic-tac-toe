@@ -20,6 +20,10 @@ body {
   font: 14px "Century Gothic", Futura, sans-serif;
   @include neon($blue);
   margin: 20px;
+
+  .bold {
+    font-weight: bold;
+  }
 }
 
 button {

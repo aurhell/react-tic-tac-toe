@@ -1,31 +1,31 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  color: #fff;
+$white: #fff;
+$blue: #0ff;
+$red: #e80000;
+$green: #87ed6b; 
+
+@mixin neon($color) {
+  color: $white;
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
+    0 0 40px $color,
+    0 0 80px $color,
+    0 0 90px $color,
+    0 0 100px $color,
+    0 0 150px $color;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  @include neon($blue);
   margin: 20px;
 }
 
 button {
   border: none;
   background: transparent;
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
+  @include neon($blue);
   cursor: pointer;
 }
 
@@ -58,42 +58,15 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 34px;
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
+  @include neon($blue);
 }
 
 .square-green {
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #87ed6b,
-    0 0 80px #87ed6b,
-    0 0 90px #87ed6b,
-    0 0 100px #87ed6b,
-    0 0 150px #87ed6b;
+  @include neon($green);
 }
 
 .square-red {
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #e80000,
-    0 0 80px #e80000,
-    0 0 90px #e80000,
-    0 0 100px #e80000,
-    0 0 150px #e80000;
+  @include neon($red);
 }
 
 .square:focus {

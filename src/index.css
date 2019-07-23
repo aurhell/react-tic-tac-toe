@@ -13,8 +13,25 @@ body {
   margin: 20px;
 }
 
+button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+  cursor: pointer;
+}
+
 ol, ul {
   padding-left: 30px;
+  list-style-type: none;
 }
 
 .board-row:after {
@@ -97,8 +114,9 @@ ol, ul {
   margin-left: 20px;
 }
 
-
-
+.game-history {
+  margin-left: 20px;
+}
 
 html {
   height: 100%;

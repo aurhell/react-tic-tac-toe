@@ -18,4 +18,29 @@ function calculateWinner(squares) {
     return null;
 }
 
-export default calculateWinner;
+function getPosition(i) {
+    switch (i) {
+        case 0:
+            return 'x:1 - y:1';
+        case 1:
+            return 'x:2 - y:1';
+        case 2:
+            return 'x:3 - y:1';
+        case 3:
+            return 'x:1 - y:2';
+        case 4:
+            return 'x:2 - y:2';
+        case 5:
+            return 'x:3 - y:2';
+        case 6:
+            return 'x:1 - y:3';
+        case 7:
+            return 'x:2 - y:3';
+        case 8:
+            return 'x:3 - y:3';
+        default:
+        return;     
+    }
+}
+
+export default {calculateWinner, getPosition};

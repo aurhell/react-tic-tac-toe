@@ -2,6 +2,8 @@ import React from 'react';
 import Board from './Board';
 import utils from './utils';
 
+const MAX_NUMBER = 9;
+
 class Game extends React.Component {
     constructor(props) {
       super(props);
@@ -52,7 +54,7 @@ class Game extends React.Component {
           'Go to game start';
         return (
           <li key={move}>
-            <button 
+            <button
               onClick={() => this.jumpTo(move)}
               className={ this.state.stepNumber === move ? 'bold' : null }
             >
@@ -63,15 +65,18 @@ class Game extends React.Component {
       });
       
       let status;
+
       if (winner) {
         status = `${winner} wins !`;
       } 
       else {
-        status = `Next player: ${this.state.xIsNext ? 'X': 'O'}`;
+        status = this.state.stepNumber === MAX_NUMBER
+          ? `It's a draw...`
+          : `Next player: ${this.state.xIsNext ? 'X': 'O'}`;
       }
 
       return (
-        <div className="game">
+        <div className="game grid-container">          
           <div className="game-board">
             <Board 
               squares={current.squares}

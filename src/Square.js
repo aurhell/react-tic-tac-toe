@@ -5,6 +5,7 @@ function Square(props) {
       <button 
           className={ 'square ' + getColor(props.value)}
           onClick={props.onClick}
+          disabled={props.value !== null}
         >
           {props.value}
       </button>
@@ -13,10 +14,10 @@ function Square(props) {
 
   function getColor(value) {
     if (value === 'X') {
-      return 'square-red';
+      return 'square--red';
     }
     if (value === '0') {
-      return 'square-green';
+      return 'square--green';
     } 
     return;
   }

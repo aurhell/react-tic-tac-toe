@@ -21,7 +21,7 @@ class Board extends React.Component {
       return <Square 
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
-        className={this.props.squares[i]==='X' ? 'square-red' : 'square-green'}
+        className={this.props.squares[i]==='X' ? 'square--red' : 'square--green'}
       />;
     }
   
